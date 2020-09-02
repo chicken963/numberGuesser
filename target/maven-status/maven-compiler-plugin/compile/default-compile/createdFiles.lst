@@ -1,0 +1,7 @@
+computation\NumberDealer.class
+restServices\ComputationController.class
+restServices\Answer.class
+computation\NumberValidator.class
+computation\NumberEvaluator.class
+Application.class
+computation\NumberGenerator.class
