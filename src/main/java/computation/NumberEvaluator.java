@@ -1,7 +1,5 @@
 package computation;
 
-import restServices.*;
-
 public class NumberEvaluator {
     private final int numberToGuess;
     private final int numberAttempted;

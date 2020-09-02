@@ -1,6 +1,6 @@
 computation\NumberDealer.class
 restServices\ComputationController.class
-restServices\Answer.class
+computation\Answer.class
 computation\NumberValidator.class
 computation\NumberEvaluator.class
 Application.class
