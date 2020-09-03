@@ -1,3 +1,4 @@
+import computation.Answer;
 import computation.NumberEvaluator;
 import org.junit.Test;
 
@@ -8,7 +9,8 @@ public class TestNumberEvaluator {
 
     @Test
     public void testNumberEvaluator() {
-        String result = new NumberEvaluator(33, 30).giveAnswer();
-        assertEquals("3Б4К", result);
+        Answer result = new NumberEvaluator(3204, 3014).giveAnswer();
+        assertEquals(result.getCows(), 1);
+        assertEquals(result.getBulls(), 2);
     }
 }

@@ -1,14 +1,19 @@
 package computation;
 
-import org.springframework.boot.SpringApplication;
-
 public class Answer {
-    private int numberOfCows;
-    private int numberOfBulls;
+    private int cows;
+    private int bulls;
 
-    public Answer(int numberOfCows, int numberOfBulls) {
-        this.numberOfCows = numberOfCows;
-        this.numberOfBulls = numberOfBulls;
+    public Answer(int numberOfBulls, int numberOfCows) {
+        this.cows = numberOfCows;
+        this.bulls = numberOfBulls;
     }
 
+    public int getCows() {
+        return cows;
+    }
+
+    public int getBulls() {
+        return bulls;
+    }
 }
