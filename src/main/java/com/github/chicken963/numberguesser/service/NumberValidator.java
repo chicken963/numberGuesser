@@ -1,4 +1,4 @@
-package computation;
+package com.github.chicken963.numberguesser.service;
 
 public class NumberValidator {
     public int number;
@@ -7,10 +7,9 @@ public class NumberValidator {
         this.number = number;
     }
 
-    private NumberDealer dealer = new NumberDealer();
 
     public boolean areDigitsDistinct(){
-        int[] numberDigits = dealer.decompose(number);
+        int[] numberDigits = NumberDealer.getInstance().decompose(number);
         for (int i = 0; i < 4; i++) {
             for (int j = i + 1; j < 4; j++) {
                 if (numberDigits[i] == numberDigits[j]) {

@@ -1,9 +1,6 @@
-package computation;
+package com.github.chicken963.numberguesser.service;
 
-public class NumberGenerator {
-//    public NumberGenerator() {
-//        generateNumber();
-//    }
+public class NumberGenerator implements Generator {
 
     public static int generateNumber() {
         NumberValidator validator;

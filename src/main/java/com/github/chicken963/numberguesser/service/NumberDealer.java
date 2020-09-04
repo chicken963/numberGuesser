@@ -1,6 +1,8 @@
-package computation;
+package com.github.chicken963.numberguesser.service;
 
 public class NumberDealer {
+
+    public static final NumberDealer INSTANCE = new NumberDealer();
 
     public int[] decompose(int number){
         int[] digitsArray = new int[4];
@@ -17,5 +19,9 @@ public class NumberDealer {
             number += Math.pow(10, range) * digitsArray[3 - range];
         }
         return number;
+    }
+
+    public static NumberDealer getInstance() {
+        return INSTANCE;
     }
 }

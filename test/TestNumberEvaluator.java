@@ -1,5 +1,5 @@
-import computation.Answer;
-import computation.NumberEvaluator;
+import com.github.chicken963.numberguesser.domain.Answer;
+import com.github.chicken963.numberguesser.service.NumberEvaluator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

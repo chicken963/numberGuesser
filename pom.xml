@@ -15,6 +15,10 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -64,7 +68,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>Application</mainClass>
+                            <mainClass>com.github.chicken963.numberguesser.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -74,7 +78,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Application</mainClass>
+                            <mainClass>com.github.chicken963.numberguesser.Application</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

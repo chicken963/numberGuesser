@@ -1,11 +1,12 @@
-package computation;
+package com.github.chicken963.numberguesser.service;
+
+import com.github.chicken963.numberguesser.domain.Answer;
 
 public class NumberEvaluator {
     private final int numberToGuess;
     private final int numberAttempted;
     private int[] digitsToGuess;
     private int[] digitsEntered;
-    NumberDealer dealer = new NumberDealer();
 
 
     public NumberEvaluator(int numberToGuess, int numberAttempted) {
@@ -13,8 +14,8 @@ public class NumberEvaluator {
         this.numberAttempted = numberAttempted;
         System.out.println(numberToGuess);
         System.out.println(numberAttempted);
-        this.digitsToGuess = dealer.decompose(numberToGuess);
-        this.digitsEntered = dealer.decompose(numberAttempted);
+        this.digitsToGuess = NumberDealer.getInstance().decompose(numberToGuess);
+        this.digitsEntered = NumberDealer.getInstance().decompose(numberAttempted);
     }
 
     private int countBulls(){

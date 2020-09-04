@@ -1,4 +1,4 @@
-package computation;
+package com.github.chicken963.numberguesser.domain;
 
 public class Answer {
     private int cows;
