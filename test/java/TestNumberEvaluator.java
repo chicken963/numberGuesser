@@ -1,3 +1,5 @@
+package java;
+
 import com.github.chicken963.numberguesser.domain.Answer;
 import com.github.chicken963.numberguesser.service.NumberEvaluator;
 import org.junit.Test;
