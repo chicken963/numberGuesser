@@ -5,11 +5,12 @@
     <title>Halo</title>
 </head>
 <body>
-    <div>Будь как дома путник
-        Я ни в чём не откажу
-        Я ни в чём не откажу
-        Я ни в чём не откажу - хой!
-    </div>
-    <div class="btn btn-primary">Начать игру</div>
+<form action="#" th:action="@{/compute}" method="get" id="test">
+<label for="guess-value">Your guess:</label>
+<input type="text" name="guess" id="guess-value">
+    <button type="submit" name="submit" value="0" id="check-guess">Check the guess</button>
+<!--<a href="/compute">Check the Guess</a>-->
+</form>
+<script src="app.js"></script>
 </body>
 </html>

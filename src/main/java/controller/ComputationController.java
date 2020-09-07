@@ -2,6 +2,7 @@ package controller;
 
 import com.github.chicken963.numberguesser.domain.Answer;
 import com.github.chicken963.numberguesser.service.NumberEvaluator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,15 +13,17 @@ import static com.github.chicken963.numberguesser.service.NumberGenerator.genera
 @RestController
 public class ComputationController {
     public static final int rightAnswer = generateNumber();
+
     @GetMapping("/")
     public String greeting(Model model){
-//        model.addAttribute("message", "Baeldung");
-        return "index";
+        return null;
     }
 
     @GetMapping("/compute")
-    public static Answer returnAnswer(@RequestParam(value = "guess") String guess){
+    public static String returnAnswer(@RequestParam(value = "guess", defaultValue = "1234") String guess){
         NumberEvaluator evaluator = new NumberEvaluator(Integer.parseInt(guess), rightAnswer);
-        return evaluator.giveAnswer();
+        Answer answer = evaluator.giveAnswer();
+        String resultToShow = String.format("Your result: %dК%dБ", answer.getCows(), answer.getBulls());
+        return resultToShow;
     }
 }
