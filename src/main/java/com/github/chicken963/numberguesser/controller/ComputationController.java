@@ -1,8 +1,7 @@
-package controller;
+package com.github.chicken963.numberguesser.controller;
 
 import com.github.chicken963.numberguesser.domain.Answer;
 import com.github.chicken963.numberguesser.service.NumberEvaluator;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

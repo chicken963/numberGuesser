@@ -3,8 +3,7 @@ function translatePromise(guess) {
         var radr;
         fetch(`http://localhost:8080/compute?guess=` + guess)
             .then(res => res.json())
-            .then(json => radr = JSON.stringify(json));
-        document.getElementById('test').innerHTML = radr;
+            .then(json => document.getElementById('test').innerHTML = JSON.stringify(json));
     })
 }
 
