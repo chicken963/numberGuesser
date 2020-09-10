@@ -9,6 +9,10 @@ public class Answer {
         this.bulls = numberOfBulls;
     }
 
+    public boolean isRight() {
+        return this.getBulls() == 4 && this.getCows() == 0;
+    }
+
     public int getCows() {
         return cows;
     }
@@ -16,4 +20,5 @@ public class Answer {
     public int getBulls() {
         return bulls;
     }
+
 }

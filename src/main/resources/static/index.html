@@ -2,17 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
     <title>Halo</title>
 </head>
 <body>
-<form action="#" th:action="@{/compute}" method="get" id="test" class="p-2">
-<label for="guess-value" class="col-sm-2 col-form-label"style="display: block">Your guess:</label>
-<input type="text" name="guess" id="guess-value" class="col-sm-2 form-control" style="display: inline-block">
-<!--    <button type="submit" name="submit" value="0">Check the guess</button>-->
-    <div class="btn btn-primary ml-1" th:type="submit" id="check-guess">Check the guess</div>
-<!--<a href="/compute">Check the Guess</a>-->
-</form>
+<div id="test">
+    <form action="#" th:action="@{/compute}" method="get" class="p-2">
+        <label for="guess-value" class="col-sm-2 col-form-label">Your guess:</label>
+        <div class="input-group-prepend">
+            <input type="text" name="guess" id="guess-value" class="col-sm-2 form-control" >
+            <!--    <button type="submit" name="submit" value="0">Check the guess</button>-->
+            <div class="btn btn-primary ml-1" th:type="submit" id="check-guess">Check the guess</div>
+        </div>
+        <div class="card bg-light m-1 col-sm-4 p-2" id="numberOfAttempts">Использовано попыток: </div>
+        <!--<a href="/compute">Check the Guess</a>-->
+    </form>
+</div>
 <script src="app.js"></script>
 </body>
 </html>
